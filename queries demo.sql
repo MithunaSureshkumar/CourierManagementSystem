@@ -101,11 +101,11 @@ create table Parcel( ParcelID INT PRIMARY KEY,
     Description text,
     Weight decimal(5,2),
     FOREIGN KEY (CourierID) references Couriers(CourierID))
-
+--added sent_date to find the differences between sent and delivered date to find average in 10th query
 alter table Couriers
 add sentdate Date
 select*from couriers
-
+-- to find no of couriers handled by employees 
 alter table Couriers
 add HandledBy int
 alter table Couriers
